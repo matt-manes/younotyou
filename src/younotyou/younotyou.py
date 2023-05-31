@@ -1,8 +1,5 @@
 import fnmatch
-from pathlib import Path
 from typing import Iterable
-
-from pathier import Pathier
 
 
 def younotyou(
@@ -37,6 +34,6 @@ def younotyou(
     return [
         candidate
         for candidate in candidates
-        if any(matcher(candidate, pattern) for pattern in include_patterns)  # type: ignore
-        and all(not matcher(candidate, pattern) for pattern in exclude_patterns)  # type: ignore
+        if any(matcher(candidate, pattern) for pattern in include_patterns)
+        and all(not matcher(candidate, pattern) for pattern in exclude_patterns)
     ]
