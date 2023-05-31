@@ -1,7 +1,8 @@
 import fnmatch
 from pathlib import Path
-from pathier import Pathier
 from typing import Iterable
+
+from pathier import Pathier
 
 
 def younotyou(

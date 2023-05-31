@@ -7,7 +7,7 @@ name = "younotyou"
 description = "Filter a list of strings and/or paths based on include and exclude patterns."
 version = "0.0.0"
 requires-python = ">=3.10"
-dependencies = []
+dependencies = ["pathier", "pytest"]
 readme = "README.md"
 keywords = ["fnmatch", "match", "patternmatching", "filter", "filtering", "string", "path"]
 classifiers = [
