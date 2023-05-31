@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "younotyou"
 description = "Filter a list of strings and/or paths based on include and exclude patterns."
-version = "0.0.0"
+version = "0.0.1"
 requires-python = ">=3.10"
 dependencies = ["pathier", "pytest"]
 readme = "README.md"
