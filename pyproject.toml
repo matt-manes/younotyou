@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "younotyou"
+description = "Filter a list of strings and/or paths based on include and exclude patterns."
+version = "0.0.0"
+requires-python = ">=3.10"
+dependencies = []
+readme = "README.md"
+keywords = ["fnmatch", "match", "patternmatching", "filter", "filtering", "string", "path"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    ]
+
+[[project.authors]]
+name = "Matt Manes"
+email = "mattmanes@pm.me"
+
+[project.urls]
+"Homepage" = "https://github.com/matt-manes/younotyou"
+"Documentation" = "https://github.com/matt-manes/younotyou/tree/main/docs"
+"Source code" = "https://github.com/matt-manes/younotyou/tree/main/src/younotyou"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+    ]
+pythonpath = "src"
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    ".coverage",
+    ".pytest_cache",
+    ".vscode",
+    "tests",
+    ".gitignore"
+    ]
+[project.scripts]
