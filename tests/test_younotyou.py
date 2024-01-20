@@ -1,6 +1,6 @@
 import pytest
 
-from younotyou import younotyou, Matcher
+from younotyou import Matcher, younotyou
 
 candidates = [
     "asefasdfpatternasdfie",
