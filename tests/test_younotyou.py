@@ -1,9 +1,31 @@
 import pytest
 
-from younotyou import younotyou
+from younotyou import younotyou, Matcher
+
+candidates = [
+    "asefasdfpatternasdfie",
+    "aslkfjeasdfpatternasdlfuhoh",
+    "asdfUHOHasdflePattERn",
+]
 
 
-def test():
+def test__matcher():
+    matcher = Matcher(["*string*", "my*"], ["*STrinG*"])
+    assert matcher.matches("string")
+    assert not matcher.matches("STrinGent")
+    assert matcher.matches("stringent")
+    assert matcher.matches("my text")
+    assert not matcher.matches("this is my text")
+    assert not matcher.matches("nope")
+    matcher.case_sensitive = False
+    assert not matcher.matches("stringent")
+    ##########################################
+    matcher.case_sensitive = True
+    assert "string" in matcher
+    assert not "STrinGent" in matcher
+
+
+def test__younotyou():
     candidates = [
         "asefasdfpatternasdfie",
         "aslkfjeasdfpatternasdlfuhoh",
