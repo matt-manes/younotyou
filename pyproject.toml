@@ -1,7 +1,7 @@
 [project]
 name = "younotyou"
 description = "Filter a list of strings and/or paths based on include and exclude patterns."
-version = "0.1.0"
+version = "0.1.1"
 dependencies = []
 readme = "README.md"
 keywords = ["fnmatch", "match", "patternmatching", "filter", "filtering", "string", "path"]
