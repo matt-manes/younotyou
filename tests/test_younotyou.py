@@ -1,5 +1,3 @@
-import pytest
-
 from younotyou import Matcher, younotyou
 
 candidates = [
